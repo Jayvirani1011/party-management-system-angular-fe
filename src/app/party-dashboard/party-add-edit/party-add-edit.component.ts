@@ -13,7 +13,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { IPartyRes } from '..';
 import { environment } from '../../../environments/environment';
-import { PathNormalize, RemoveNullProperties } from '@utils/common.utils';
+import { RemoveNullProperties, PathNormalize } from 'app/shared/utils/common.utils';
 
 @Component({
   selector: 'app-party-add-edit',
