@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
-import { IAddPartyRes, IPartyRes } from '.';
+import { IAddPartyRes, IPartyRes } from './party';
 import { Observable } from 'rxjs';
 
 @Injectable({

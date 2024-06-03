@@ -11,7 +11,7 @@ import { DatePipe } from '@angular/common';
 import { finalize, map, tap } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { IPartyRes } from '..';
+import { IPartyRes } from '../party';
 import { environment } from '../../../environments/environment';
 import { RemoveNullProperties, PathNormalize } from 'app/shared/utils/common.utils';
 

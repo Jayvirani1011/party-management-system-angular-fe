@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { ILoginReq, ILoginRes, ILogoutRes } from '.';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/./common/http';
 import { environment } from '../../environments/environment';
 import { Observable, tap } from 'rxjs';
+import { ILoginReq, ILoginRes, ILogoutRes } from './login';
 
 @Injectable({
   providedIn: 'root',

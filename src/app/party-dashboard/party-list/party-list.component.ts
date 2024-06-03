@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { Observable, Subscription, map, shareReplay, tap } from "rxjs";
 import { PartyService } from "../party.service";
 import { MatDialog } from "@angular/material/dialog";
-import { IPartyRes } from "..";
+import { IPartyRes } from "../party";
 import { MatTableDataSource } from "@angular/material/table";
 import { DeviceService } from "../../shared/services/device.service";
 import { MatSnackBar } from "@angular/material/snack-bar";
