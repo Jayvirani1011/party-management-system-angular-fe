@@ -12,7 +12,6 @@
 *.js
 *.js.map
 *.css
-*.d.ts
 
 # Test files
 *.spec.ts
