@@ -11,8 +11,6 @@
 # Angular specific files
 *.js
 *.js.map
-*.css
-
 # Test files
 *.spec.ts
 .angular/*
