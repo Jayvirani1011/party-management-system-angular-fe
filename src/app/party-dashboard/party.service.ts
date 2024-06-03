@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
-import { IAddPartyRes, IPartyRes } from '../party-dashboard/party';
 import { Observable } from 'rxjs';
+import { IAddPartyRes, IPartyRes } from './party';
 
 @Injectable({
   providedIn: 'root',

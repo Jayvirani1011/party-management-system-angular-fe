@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { Subscription, tap } from "rxjs";
 import { PartyService } from "../party.service";
-import { IPartyRes } from "../../party-dashboard/party";
 import { MatTableDataSource } from "@angular/material/table";
 import { DeviceService } from "../../shared/services/device.service";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import Swal from "sweetalert2";
+import { IPartyRes } from "../party";
 
 @Component({
   selector: "app-party-list",
