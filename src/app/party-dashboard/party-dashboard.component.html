@@ -1,0 +1,59 @@
+<mat-toolbar style="background-color: black; color: white;">
+  <span>Party Management System</span>
+  <span class="space-between"></span>
+  <ng-container *ngIf="!loggingOut; else spinner">
+    <button mat-icon-button (click)="onLogout()">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </ng-container>
+  <ng-template #spinner>
+    <mat-spinner [diameter]="25" [strokeWidth]="2" color="accent"></mat-spinner>
+  </ng-template>
+</mat-toolbar>
+
+<div
+  [ngClass]="{
+    'p-3': !isMobile,
+    'rounded-4': !isMobile,
+    'mat-elevation-z8': !isMobile,
+    'm-3': !isMobile,
+    'p-2': isMobile,
+    'rounded-2': isMobile,
+  }"
+  class="d-grid gap-3">
+  <div class="d-flex justify-content-between align-items-center">
+    <ng-container *ngIf="!isMobile; else fabButton">
+      <button
+        mat-flat-button
+        color="primary"
+        [ngClass]="{ 'rounded-4': !isMobile }"
+        type="button"
+        (click)="addParty()">
+        <mat-icon>add</mat-icon>Create Party Data
+      </button>
+    </ng-container>
+    <ng-template #fabButton>
+      <button
+        mat-fab
+        color="accent"
+        class="position-absolute bottom-0 end-0 z-3 m-3"
+        type="button"
+        (click)="addParty()">
+        <mat-icon>add</mat-icon>
+      </button>
+    </ng-template>
+  
+    <mat-form-field
+      appearance="outline"
+      color="accent"
+      [ngClass]="{ 'w-100': isMobile }">
+      <mat-label>Search</mat-label>
+      <input type="search" matInput (input)="applyFilter($event)" />
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </div>
+  <app-party-list
+    [parties]="parties"
+    (refresh)="getPartyData()"
+    (edit)="editParty($event)"></app-party-list>
+</div>
