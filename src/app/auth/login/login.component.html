@@ -1,8 +1,8 @@
 <div class="d-flex justify-content-center align-items-center vh-100 p-3">
-  <mat-card class="mx-auto rounded-4 shadow-lg" style="max-width: 420px">
+  <mat-card style="max-width: 420px; box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;">
     <mat-card-header>
       <mat-card-title>
-        <h2>Login</h2>
+        <h2>Sign In</h2>
       </mat-card-title>
     </mat-card-header>
     <mat-card-content>
@@ -15,7 +15,8 @@
           <input
             matInput
             formControlName="username"
-            placeholder="Enter your username" />
+            placeholder="Enter your username"
+          />
           <mat-icon matPrefix>person</mat-icon>
           <mat-error *ngIf="loginForm.get('username')?.hasError('required')"
             >Username is required</mat-error
@@ -31,16 +32,18 @@
             matInput
             [type]="hidePassword ? 'password' : 'text'"
             formControlName="password"
-            placeholder="Enter your password" />
+            placeholder="Enter your password"
+          />
           <mat-icon matPrefix>lock</mat-icon>
           <button
             mat-icon-button
             matSuffix
             (click)="passwordToggle($event)"
             [attr.aria-label]="'Hide password'"
-            [attr.aria-pressed]="hidePassword">
+            [attr.aria-pressed]="hidePassword"
+          >
             <mat-icon>{{
-              hidePassword ? 'visibility_off' : 'visibility'
+              hidePassword ? "visibility_off" : "visibility"
             }}</mat-icon>
           </button>
           <mat-error *ngIf="loginForm.get('password')?.hasError('required')"
@@ -54,20 +57,23 @@
         <div class="text-center">
           <button
             mat-flat-button
-            color="primary"
+            color="accent"
             type="submit"
             [disabled]="logging"
             class="w-50 rounded-5"
-            style="height: 2.5rem">
+            style="height: 2.5rem"
+          >
             <span class="d-flex gap-2">
-              @if (logging) {
+              <ng-container *ngIf="logging; else notLogging">
                 <mat-spinner
                   [diameter]="20"
                   [strokeWidth]="1"
-                  color="light"></mat-spinner>
-              }
-
-              <span>Login</span>
+                  color="light"
+                ></mat-spinner>
+              </ng-container>
+              <ng-template #notLogging>
+                <span>Sign In</span>
+              </ng-template>
             </span>
           </button>
         </div>
