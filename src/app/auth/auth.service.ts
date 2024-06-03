@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Observable, tap } from 'rxjs';
-import { ILoginReq, ILoginRes, ILogoutRes } from './login';
+import { ILoginReq, ILoginRes, ILogoutRes } from '../auth/login';
 
 @Injectable({
   providedIn: 'root',

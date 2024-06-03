@@ -3,7 +3,7 @@ import { AuthService } from './../auth/auth.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { PartyService } from './party.service';
 import { Component, OnInit } from '@angular/core';
-import { IPartyRes } from './party';
+import { IPartyRes } from '../party-dashboard/party';
 import { Subscription, tap } from 'rxjs';
 import { DeviceService } from '../shared/services/device.service';
 import { MatDialog } from '@angular/material/dialog';
